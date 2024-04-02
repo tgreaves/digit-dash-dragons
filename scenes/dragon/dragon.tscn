@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://biisaiwaob51l"]
+
+[ext_resource type="Script" path="res://scenes/dragon/dragon.gd" id="1_hs5j2"]
+[ext_resource type="Texture2D" uid="uid://dncn5pi7vcmb3" path="res://scenes/dragon/Dragon Sprite Sheet.png" id="1_xseug"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmkfq"]
+atlas = ExtResource("1_xseug")
+region = Rect2(0, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qckx0"]
+atlas = ExtResource("1_xseug")
+region = Rect2(128, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsha8"]
+atlas = ExtResource("1_xseug")
+region = Rect2(256, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww6yu"]
+atlas = ExtResource("1_xseug")
+region = Rect2(384, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h68bu"]
+atlas = ExtResource("1_xseug")
+region = Rect2(512, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ueg72"]
+atlas = ExtResource("1_xseug")
+region = Rect2(640, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0t52"]
+atlas = ExtResource("1_xseug")
+region = Rect2(768, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5771"]
+atlas = ExtResource("1_xseug")
+region = Rect2(896, 512, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epjdc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmkfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qckx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsha8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww6yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h68bu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ueg72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0t52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5771")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dragon" type="Node2D"]
+script = ExtResource("1_hs5j2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_epjdc")
+frame_progress = 0.232401

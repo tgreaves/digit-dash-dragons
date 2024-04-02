@@ -12,3 +12,6 @@ ARTWORK
 
 Dragons: Elthen
 https://elthen.itch.io/2d-pixel-art-dragon-sprites
+
+Background: free-game-assets
+https://free-game-assets.itch.io/free-horizontal-game-backgrounds

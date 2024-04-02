@@ -80,4 +80,5 @@ theme_override_fonts/font = ExtResource("2_secfm")
 theme_override_font_sizes/font_size = 32
 text = "EXIT GAME"
 
+[connection signal="pressed" from="CanvasLayer/MainMenuContainer/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenuContainer/ExitGame" to="." method="_on_exit_game_pressed"]
