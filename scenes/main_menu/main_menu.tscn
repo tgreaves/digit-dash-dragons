@@ -19,10 +19,23 @@ offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_secfm")
-theme_override_font_sizes/font_size = 64
-text = "THIS IS THE VERSION TEXT
+theme_override_font_sizes/font_size = 24
+text = "VERSION TEXT
 "
 horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="CopyrightLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 1344.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_secfm")
+theme_override_font_sizes/font_size = 24
+text = "Copyright (c) 2024-present Tristan Greaves
+"
 vertical_alignment = 2
 
 [node name="MainMenuContainer" type="VBoxContainer" parent="CanvasLayer"]
@@ -37,3 +50,34 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/MainMenuContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_secfm")
+theme_override_font_sizes/font_size = 32
+text = "DIGIT DASH DRAGONS"
+
+[node name="BlankLabel" type="Label" parent="CanvasLayer/MainMenuContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_secfm")
+theme_override_font_sizes/font_size = 32
+
+[node name="StartGame" type="Button" parent="CanvasLayer/MainMenuContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_secfm")
+theme_override_font_sizes/font_size = 32
+text = "START GAME"
+
+[node name="BlankLabel2" type="Label" parent="CanvasLayer/MainMenuContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_secfm")
+theme_override_font_sizes/font_size = 32
+
+[node name="ExitGame" type="Button" parent="CanvasLayer/MainMenuContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_secfm")
+theme_override_font_sizes/font_size = 32
+text = "EXIT GAME"
+
+[connection signal="pressed" from="CanvasLayer/MainMenuContainer/ExitGame" to="." method="_on_exit_game_pressed"]
